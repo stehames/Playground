@@ -1,5 +1,6 @@
 body {
-    font-family: Arial;
+    font-family: sans-serif;
+    background-color: purple;
 
 }
 
@@ -15,8 +16,28 @@ h2 {
     text-align: center;
 }
 
+/** Seletor de tag **/
 h1 {
     text-transform: uppercase;
     text-align: center;
 }
 
+/** Seletor de ID **/
+#saudacao {
+    color: blue;
+}
+
+/** Seletores de classe **/
+.titulo {
+    font-size: 22px
+}
+
+/** Seletores combinados **/
+h2.subtitulo {
+    color:yellow
+}
+
+/** Seletores descendentes**/
+ul#lista li{
+    text-align:center
+}
