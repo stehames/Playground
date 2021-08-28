@@ -1,6 +1,12 @@
 body {
     font-family: sans-serif;
-    background-color: purple;
+    background-color: #ddb8dd;
+    /* background-image: url(../23-08/outraimagem.jpg); */
+    /*background-size: 100%;*/
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
 
 }
 
@@ -14,6 +20,7 @@ p {
 h2 {
     font-style: italic;
     text-align: center;
+    text-decoration: underline;
 }
 
 /** Seletor de tag **/
@@ -24,7 +31,8 @@ h1 {
 
 /** Seletor de ID **/
 #saudacao {
-    color: blue;
+    color: rgba(54, 54, 224, 0.5);
+
 }
 
 /** Seletores de classe **/
