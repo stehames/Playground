@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.caixa{
+    width: 669px;
+    margin: 20px auto;
+    border: 3px solid gray;
+    
+    /* usa flex sempre no pai */
+    display: flex;
+
+    /*quando não cabe mais na mesma linha, pode quebrar a linha com flex-wrap*/
+    flex-wrap: wrap;
+}
+
+.caixa div{
+    padding: 20px;
+    background-color: orangered;
+    margin: 10px;
+    width:200px;
+}
