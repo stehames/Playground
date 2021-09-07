@@ -21,25 +21,22 @@ body{
 
     /* como dispor os elementos, row = linha, colunm = coluna */
     flex-direction: row;
-    flex-direction: row-reverse;/* coloca ao contrario linha */
-    flex-direction: column;
-    flex-direction: column-reverse;/* coloca ao contrario coluna */
+    /* flex-direction: row-reverse;coloca ao contrario linha */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse;coloca ao contrario coluna */
 
     /* como separar as caixas na largura */
-    justify-content: flex-start; /* alinhadas ao começo  */
+    /* justify-content: flex-start; alinhadas ao começo  */
     justify-content: center;/* alinhadas ao centro  */
-    justify-content: flex-end;  /* alinhadas ao fim  */ 
-    justify-content:space-between; /* coloca um espaço entre elas  */
-    justify-content:space-around; /* além do espaço entre elas, mais um espaço nas bordas  */ 
+    /* justify-content: flex-end;  alinhadas ao fim   */
+    /* justify-content:space-between; coloca um espaço entre elas  */
+    /* justify-content:space-around; além do espaço entre elas, mais um espaço nas bordas   */
 
      /* alinhamento no eixo transversal */
-     align-items: stretch; /* valor padrão, ocupa toda a altura */
-     align-items: flex-start; /* no começo */
-     align-items: flex-end;  /* no fim */
+     /* align-items: stretch; valor padrão, ocupa toda a altura */
+     /* align-items: flex-start; no começo */
+     /* align-items: flex-end;  no fim */
      align-items: center;    /* no centro */
-     
-
-
     }
 
 .caixa div{
@@ -47,4 +44,25 @@ body{
     background-color: orangered;
     margin: 10px;
     width:100px;
+}
+
+.item1{
+    /* vai ver a proporção em relação as outras caixas */
+    flex-grow: 1;
+
+    /* no pai eu uso o align-items, aqui usa o align-self */
+    align-self: flex-end;
+
+    /* para definir a ordem das caixas, -1, 0, 1 */
+    order: 1;
+}
+
+.item2{
+    flex-grow: 1;
+    align-self: flex-start;
+}
+
+.item3{
+    flex-grow: 1;
+    align-self: center;
 }
