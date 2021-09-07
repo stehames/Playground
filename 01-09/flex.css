@@ -8,7 +8,8 @@ body{
 }
 
 .caixa{
-    width: 669px;
+    width: 700px;
+    height: 300px;
     margin: 20px auto;
     border: 3px solid gray;
     
@@ -17,11 +18,33 @@ body{
 
     /*quando não cabe mais na mesma linha, pode quebrar a linha com flex-wrap*/
     flex-wrap: wrap;
-}
+
+    /* como dispor os elementos, row = linha, colunm = coluna */
+    flex-direction: row;
+    flex-direction: row-reverse;/* coloca ao contrario linha */
+    flex-direction: column;
+    flex-direction: column-reverse;/* coloca ao contrario coluna */
+
+    /* como separar as caixas na largura */
+    justify-content: flex-start; /* alinhadas ao começo  */
+    justify-content: center;/* alinhadas ao centro  */
+    justify-content: flex-end;  /* alinhadas ao fim  */ 
+    justify-content:space-between; /* coloca um espaço entre elas  */
+    justify-content:space-around; /* além do espaço entre elas, mais um espaço nas bordas  */ 
+
+     /* alinhamento no eixo transversal */
+     align-items: stretch; /* valor padrão, ocupa toda a altura */
+     align-items: flex-start; /* no começo */
+     align-items: flex-end;  /* no fim */
+     align-items: center;    /* no centro */
+     
+
+
+    }
 
 .caixa div{
     padding: 20px;
     background-color: orangered;
     margin: 10px;
-    width:200px;
+    width:100px;
 }
