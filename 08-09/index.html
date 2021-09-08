@@ -14,16 +14,36 @@
 </head>
 <body>
     <h1>Formulário</h1>
-    <form action="">
+    <form action="" method="">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        <input required="required" type="text" id="nome" name="nome" placeholder="Digite seu nome">
         <br>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" value="ste@gmail.com">
         <br>
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha">
+        <br><br>
+
+        <!-- radio -->
+        <label for="">Você já foi ao cinema esse ano?</label><br>
+        <input type="radio" id="sim" name="cinema" value="sim" checked="checked">
+        <label for="sim">Sim</label><br>
+        <input type="radio" id="nao" name="cinema" value="nao" >
+        <label for="nao">Não</label><br>
+
+        <!-- checkbox -->
+        <label for="genero">Qual seu gênero de cinema favorito</label><br>
+        <input type="checkbox" name="genero" id="terror" value="terror" checked="checked">
+        <label for="terror">Terror</label>
         <br>
+        <input type="checkbox" name="genero" id="drama" value="drama">
+        <label for="drama">Drama</label>
+        <br>
+        <input type="checkbox" name="genero" id="romance" value="romance">
+        <label for="romance">Romance</label>
+        <br>
+
         <!-- <input type="submit" value="Enviar"> -->
         <button type="submit">Enviar</button>
     </form>
