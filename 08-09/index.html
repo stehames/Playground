@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
 <style>
     body{
         font-family:Arial, Helvetica, sans-serif;
@@ -19,7 +19,7 @@
         <input required="required" type="text" id="nome" name="nome" placeholder="Digite seu nome">
         <br>
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" value="ste@gmail.com">
+        <input required="required" type="email" id="email" name="email" value="ste@gmail.com">
         <br>
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha">
@@ -43,6 +43,21 @@
         <input type="checkbox" name="genero" id="romance" value="romance">
         <label for="romance">Romance</label>
         <br>
+
+        <!-- formularios avançados -->
+        <label for="pais">País</label>
+        <select name="pais" id="pais">
+            <option selected disabled>Selecione</option>
+            <option value="BRA">Brasil</option>
+            <option value="ARG">Argentina</option>
+            <option value="URU">Uruguai</option>
+        </select>
+        <br>
+        <label for="mensagem">Mensagem</label><br>
+        <textarea name="mensagem" id="mensagem" cols="20" rows="5"></textarea>
+        <br>
+        <button type="button" id="">Teste</button>
+        <button type="reset" id="">Limpar Campos</button>
 
         <!-- <input type="submit" value="Enviar"> -->
         <button type="submit">Enviar</button>
