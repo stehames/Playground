@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <link rel="stylesheet" href="./estilos.css">
 <style>
     body{
         font-family:Arial, Helvetica, sans-serif;
@@ -14,6 +15,10 @@
 </head>
 <body>
     <h1>Formulário</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum saepe quae porro id eius consequuntur placeat, nemo aliquam recusandae pariatur voluptate iusto, repudiandae dicta magnam dolor adipisci veritatis nihil et.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ea fugiat tempore quae possimus dolore, doloremque quaerat itaque porro, atque illum quia natus odio fuga iusto aspernatur vel, corrupti quisquam!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore necessitatibus, amet ipsam provident laborum aut veritatis saepe atque distinctio sequi quidem consectetur. Corporis ex perspiciatis, quaerat harum sequi ipsum placeat.</p>    
+    <a href="www.google.com">Google</a>
     <form action="" method="">
         <label for="nome">Nome</label>
         <input required="required" type="text" id="nome" name="nome" placeholder="Digite seu nome">
@@ -24,7 +29,9 @@
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha">
         <br><br>
-
+        <label for="data">Data Nascimento</label>
+        <input type="date" name="data" id="data">
+        <br><br>
         <!-- radio -->
         <label for="">Você já foi ao cinema esse ano?</label><br>
         <input type="radio" id="sim" name="cinema" value="sim" checked="checked">
@@ -60,7 +67,10 @@
         <br>
         <button type="button" id="">Teste</button>
         <button type="reset" id="">Limpar Campos</button>
-
+        <br><br>
+        <label for="arq">Selecione a imagem do perfil</label><br>
+        <input type="file" name="arq" id="arq" accept=".jpg" multiple>
+        <br><br>
         <!-- <input type="submit" value="Enviar"> -->
         <button type="submit">Enviar</button>
     </form>

@@ -1,0 +1,53 @@
+body{
+    font-family: Arial;
+}
+
+/* pseudo seletores */
+
+input{
+    border-color: blue;
+}
+
+/* quando passar o mouse */
+input:hover{
+    border-color: orange;
+}
+
+/* quando clicar */
+input:focus{
+    width: 400px;
+}
+
+p:hover{
+    background-color:orange;
+}
+
+/* primeiro p */
+p:first-of-type{
+    background-color:gray;
+}
+
+/* ultimo p */
+p:last-of-type{
+    background-color:palevioletred;
+}
+
+/* pega só o ímpar */
+p:nth-child(odd){
+    background-color:orange;
+}
+
+a:visited{
+    color:red;
+    font-weight: bold;
+}
+
+a:hover{
+    color:purple;
+}
+
+a:active{
+    background-color:orange;
+    border-color: aqua;
+    color: red;
+}
