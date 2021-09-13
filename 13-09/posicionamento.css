@@ -12,7 +12,10 @@ header{
     text-align: center;
     width: 100%;
     border: 2px solid gray;
+    background-color:#fff;
     padding:10px;
+    position: fixed;
+    z-index: 2;
 }
 
 ul{
@@ -31,35 +34,30 @@ a{
 }
 
 main{
+    text-align: center;
     background-color:#f2f2f2;
     width: 100%;
     position: relative;
+    padding: 100px 0 30px;
 }
 
 footer{
-    position: relative;
     text-align: center;
     width: 100%;
     border: 2px solid gray;
+    background-color:#fff;
     padding: 20px;
-
-
     position: relative;
-    /* só posso usar se tiver position */
     top: 0px;
     left: 0px;
     bottom: 0px;
     right: 0px;
 }
 
-img{
-    /* position: absolute; */
-    /* top: 0px; */
-}
-
 img.chat{
     width: 80px;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    z-index: 2;
+    right: 10px;
+    bottom: 10px;
 }
