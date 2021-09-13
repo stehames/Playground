@@ -61,3 +61,13 @@ img.chat{
     right: 10px;
     bottom: 10px;
 }
+
+button:hover{
+    background-color:#1a73e8;
+    color:#fff;
+    /* transition-property: background-color, color, opacity;
+    transition-duration: 0.5s; */
+    transition: 
+        background-color 0.5s,
+        color 0.5s;
+}
