@@ -1,0 +1,25 @@
+.meu-elemento {
+    width: 200px;
+      height: 200px;
+      position: relative;
+      border-radius: 100%;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-name:diminuindo;
+      animation-duration: 1000ms;
+  }
+   
+  
+  @keyframes diminuindo {
+      0% {
+          background-color: pink;
+      }
+      
+      100% {
+          background-color: rgb(247, 19, 159);
+          height: 100px;
+          width: 100px;
+          opacity: 0.5;
+      }
+  }
+  
