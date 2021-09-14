@@ -1,0 +1,1 @@
+let curso = "Full Stack";
