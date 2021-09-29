@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Estudantes</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Estudantes</h1>
+    <hr>
+    <%
+        let estudantes = [
+        {nome: 'Sté', curso:'FS Blend', email: 'ste@gmail.com'},
+        {nome: 'Hendy', curso:'Mobile Android', email: 'hendy@gmail.com'},
+        {nome: 'Thomaz', curso:'Mobile iOS', email: 'thom@gmail.com'},
+        ];
+    %>
+
+    <ul>
+        <% for (let estudante of estudantes){ %>
+            <li>Olá. Sou <%= estudante.nome %> e estou no curso de <%= estudante.curso %>.
+            Meu e-mail é <%= estudante.email %></li>
+        
+        <% } %>
+    </ul>
+
+  </body>
+</html>
