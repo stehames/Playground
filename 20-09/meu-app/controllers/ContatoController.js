@@ -1,5 +1,5 @@
 const ContatoController = {
-    index: (req,res) => {
+    index: (req, res) => {
         return res.render('contato');
     }
 };

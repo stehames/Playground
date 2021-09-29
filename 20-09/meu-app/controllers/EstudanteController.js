@@ -1,5 +1,5 @@
 const EstudanteController = {
-    index: (req,res) => {
+    index: (req, res) => {
         return res.render('estudantes');
     }
 };
