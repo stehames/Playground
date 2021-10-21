@@ -1,12 +1,8 @@
 const express = require('express');
-const { deletarProduto } = require('../controllers/ProdutoController');
-
-const ProdutoController = require('../controllers/ProdutoController');
 
 const router = express.Router();
 
-router.get('/criar', ProdutoController.criarProduto);
-router.get();
-router.get('/deletar/:id', ProdutoController.deletarProduto);
+router.get('/criar', (req, res)=> res.send("Criando um produto"));
+router.get('/deletar', (req, res)=> res.send("Deletando um produto"));
 
 module.exports = router;

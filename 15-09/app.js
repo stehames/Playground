@@ -1,13 +1,10 @@
 const express = require('express');
-
+const rotasProdutos = require('./rotas/rotasProduto');
 let app = express();
 
 app.get('/',(req, res)=>res.send("Olá mundo!"));
 app.get('/contatos', (req, res)=>res.send("Página contatos"));
-app.get('/produtos/:id?', (req, res)=>{
-    let {id} = req.params;
-    res.send("Eu tenho um produto com o id: "+id);
-});
+app.use('/produtos', rotasProdutos);
 
 
 //criando um Servidor
