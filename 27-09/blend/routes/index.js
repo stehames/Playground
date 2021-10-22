@@ -10,5 +10,4 @@ router.get('/', function(req, res, next) {
 router.get('/contato', IndexController.viewContato);
 router.get('/confirmarcontato', IndexController.confirmarContato);
 
-
 module.exports = router;
