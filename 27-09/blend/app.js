@@ -6,7 +6,7 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usuariosRouter = require('./routes/usuarios');
 var produtosRouter = require('./routes/produtos');
 var logMiddleware = require('./middlewares/logSite');
 
@@ -25,7 +25,7 @@ app.use(methodOverride('_method'));
 app.use(logMiddleware);
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/usuarios', usuariosRouter);
 app.use('/produtos', produtosRouter);
 
 app.use( (req, res)=>{
