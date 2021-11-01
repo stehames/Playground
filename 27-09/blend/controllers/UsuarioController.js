@@ -17,9 +17,9 @@ let UsuarioController = {
       let usuario = JSON.stringify({
         nome,
         email,
-        senha: senhaC,
-        avatar: files[0].originalname,
-      });
+        senha : senhaC,
+        avatar: files[0].originalname, 
+    });
       fs.writeFileSync(usuarioJson, usuario);
       return res.send("Usuário cadastrado com sucesso");
     }else{
@@ -31,9 +31,24 @@ let UsuarioController = {
     res.render("login");
   },
   logarUsuario: (req, res) => {
-    let { email, senha } = req.body;
+    let { email, senha,/*logado*/ } = req.body;
     let usuarioSalvo = fs.readFileSync(usuarioJson, { encoding: "utf-8" });
     usuarioSalvo = JSON.parse(usuarioSalvo);
+
+    if(email != usuarioSalvo.email){
+        return res.send('Usuario invalido')
+    }
+    if(!bcrypt.compareSync(senha, usuarioSalvo.senha)){
+        return res.send('Senha invalida!')
+    }
+
+    req.session.usuario = usuarioSalvo;
+
+    if(logado != undefined){
+        res.cookie('logado', usuarioSalvo.email, {maxAge: 600000})
+    }
+
+    res.redirect('/produtos')
   },
 };
 module.exports = UsuarioController;

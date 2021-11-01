@@ -8,15 +8,15 @@
 </head>
 <body>
     <h1>Cadastro de Usuário</h1>
-    <% if(typeof(errors) != "undefined") {%>
+    <!-- <% if(typeof(errors) != "undefined") {%>
         <p style="color:red">Error</p>
         <ul>
             <% error.forEach((error) =>{ %>
                 <li><%= error.msg %></li>
             <% }) %>
         </ul>
-        <%}%>
-    <form action="">
+    <%}%> -->
+    <form action="/usuarios/criar" method="post">
         <h3>Nome</h3>
         <input type="text" name="nome">
         <h3>Email</h3>

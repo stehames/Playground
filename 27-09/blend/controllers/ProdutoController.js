@@ -22,11 +22,9 @@ let ProdutoController = {
         res.send("Voce editou o produto "+nomeProduto);
     },
     listarProdutos: (req, res)=>{
-        let produtos = [
-            {id:1, nome: "Produto x", preco:10},
-            {id:2, nome: "Produto y", preco:20}
-        ]
-        res.render('listaProdutos', {listaProdutos:produtos})
+        let produtos = fs.readFileSync(produtosJson, {encoding: 'utf8'});
+        produtos = JSON.parse(produtos)
+        return res.render('listaProdutos', {listaProdutos:produtos, usuario: req.session.usuario})
     },
     deletarProduto: (req, res)=>{
         let {id} = req.params

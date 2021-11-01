@@ -4,11 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usuariosRouter = require('./routes/usuarios');
 var produtosRouter = require('./routes/produtos');
 var logMiddleware = require('./middlewares/logSite');
+var cookieMiddleware = require('./middlewares/cookieLogin')
 
 var app = express();
 
@@ -16,12 +18,19 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(session({
+  secret:"projetoExpress",
+  resave:true,
+  saveUninitialized:true
+}))
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+app.use(cookieMiddleware);
 app.use(logMiddleware);
 
 app.use('/', indexRouter);
